@@ -22,8 +22,13 @@ name = "zero2prod"
 [dependencies]
 actix-web = "4.3.1"
 tokio = {version = "1.26.0", features = ["full"]}
-
+serde = {version = "1", features = ["derive"]}
+sqlx = {version = "0.6.3", default-features = false, features = ["runtime-actix-rustls", "macros", "postgres", "uuid", "chrono", "migrate"]}
+config = "0.11.0"
+uuid = {version = "1.0.0", features = ["v4"]}
+chrono = "0.4.15"
 # Dev dependencies are used exclusively when running tests or examples
 # They do not get included in the final application binary!
 [dev-dependencies]
 reqwest = "0.11"
+
